@@ -13,7 +13,24 @@
             document.documentElement.classList.add(className);
         }));
     }
-    document.querySelector(".swiper-wrapper");
+    const cardsBox = document.querySelector(".swiper-wrapper");
+    cardsBox.addEventListener("click", (e => {
+        const activeCard = document.querySelector(".active");
+        activeCard.classList.remove("active");
+        const card = e.target.closest(".swiper-slide");
+        card.classList.add("active");
+        checkingInformation();
+    }));
+    function checkingInformation() {
+        const activeCard = document.querySelector(".active");
+        const nameItem = document.querySelector(".name");
+        const jobItem = document.querySelector(".job");
+        const name = activeCard.dataset.name;
+        const job = activeCard.dataset.job;
+        nameItem.innerHTML = name;
+        jobItem.innerHTML = job;
+    }
+    checkingInformation();
     window["FLS"] = true;
     isWebp();
 })();
