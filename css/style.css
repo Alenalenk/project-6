@@ -407,7 +407,7 @@ button:hover {
 
 .no-webp .wrapper{
   background: no-repeat url("../img/2.png");
-background-size: contain;}
+}
 
 .wrapper {
   position: relative;
@@ -1053,7 +1053,7 @@ background-size: contain;}
 }
 
 .webp .wrapper{ background: no-repeat url(../img/2.webp); 
-              background-size: contain;}
+              }
 
 .webp .homefront{ background: no-repeat -5rem 0 url(../img/3.webp); }
 
